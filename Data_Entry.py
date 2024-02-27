@@ -7,9 +7,9 @@ st.set_page_config(page_title="Google Sheets App", page_icon="📄")
 
 # Display Title & Description
 
-st.title("Google Sheets App")
+st.title("Google Sheets App",help = "You can add, edit, delete, search and view clients in Google Sheets")
 
-st.markdown("You can add, edit, delete, search and view clients in Google Sheets")
+
 st.markdown("You can access the google sheet from here: [Google Sheets](https://docs.google.com/spreadsheets/d/1YkL8ZwK3bCdwlywd9Dcd3F6o_tW4xqMOyuflgEAu2iY/edit?usp=sharing)")
 st.divider()
 

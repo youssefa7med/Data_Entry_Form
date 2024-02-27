@@ -3,13 +3,15 @@ import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(page_title="Google Sheets App", page_icon="📄")
-# Change the theme
 
 
 # Display Title & Description
 
 st.title("Google Sheets App")
-st.markdown("Enter the details of the new client below")
+
+st.markdown("You can add, edit, delete, search and view clients in Google Sheets")
+st.markdown("You can access the google sheet from here: [Google Sheets](https://docs.google.com/spreadsheets/d/1YkL8ZwK3bCdwlywd9Dcd3F6o_tW4xqMOyuflgEAu2iY/edit?usp=sharing)")
+st.divider()
 
 # Establish a connection with your Google Sheet
 conn = st.connection("gsheets",type = GSheetsConnection)
@@ -28,6 +30,7 @@ Gender = ["Male","Female"]
 action = st.selectbox("Action",["Add New Client","Edit Existing Client","Delete Client","Search Client","View All Clients"])
 
 if action == "Add New Client":
+
     st.subheader("Add New Client")
     # Onboarding New Client
     with st.form("Client Form"):
@@ -151,3 +154,4 @@ elif action == "Search Client":
 
     if st.button("Search"):
         st.dataframe(existing_data[existing_data["Email"].str.contains(client_to_search)])
+

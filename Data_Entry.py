@@ -94,7 +94,7 @@ elif action == "Edit Existing Client":
         last_name = st.text_input("Last Name*",max_chars = 15,value = client_data["Last Name"],help = "Enter your last name")
         gender = st.radio("Gender*",["Male","Female"],index = Gender.index(client_data["Gender"]),horizontal = True,help = "Enter your gender")
         age = st.number_input("Age*",value = client_data["Age"],help = "Enter your age")
-        phone = st.text_input("Phone*",max_chars = 11,value = client_data["Phone"],help = "Enter your phone number")
+        phone = st.text_input("Phone*",max_chars = 10,value = client_data["Phone"],help = "Enter your phone number without starting with zero")
         email = st.text_input("Email*",max_chars = 30,value = client_data["Email"],help = "Enter your email")
         country = st.text_input("Country*",max_chars = 15,value = client_data["Country"],help = "Enter your country")
         address = st.text_input("Address",max_chars = 30,value = client_data["Address"],help = "Enter your address")

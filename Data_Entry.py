@@ -38,7 +38,7 @@ if action == "Add New Client":
         last_name = st.text_input("Last Name*",max_chars = 15,help = "Enter your last name")
         gender = st.radio("Gender*",["Male","Female"],index = None,horizontal = True,help = "Enter your gender")
         age = st.number_input("Age*",min_value = 0,max_value = 100,step = 1,help = "Enter your age")
-        phone = st.text_input("Phone*",max_chars = 11,help = "Enter your phone number")
+        phone = st.text_input("Phone*",max_chars = 10,help = "Enter your phone number without starting with zero")
         email = st.text_input("Email*",max_chars = 30,help = "Enter your email")
         country = st.text_input("Country*",max_chars = 15,help = "Enter your country")
         address = st.text_input("Address",max_chars = 30,help = "Enter your address")

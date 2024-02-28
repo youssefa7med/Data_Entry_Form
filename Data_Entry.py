@@ -104,7 +104,7 @@ elif action == "Edit Existing Client":
         update_button = st.form_submit_button(label="Update Client Details")
 
         if update_button:
-            if not first_name or not last_name or not gender or not age or not phone or not email or not country or not age > 100 or not age < 0:
+            if not first_name or not last_name or not gender or not age or not phone or not email or not country :
                 st.warning("Ensure all mandatory fields are filled With correct values.")
             else:
                 # Removing old entry from the dataframe

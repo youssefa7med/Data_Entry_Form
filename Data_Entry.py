@@ -150,8 +150,10 @@ elif action == "Delete Client":
         st.success("Client successfully deleted!")
 
 elif action == "Search Client":
+
     client_to_search = st.selectbox("Select Client",existing_data["Email"].tolist())
 
     if st.button("Search"):
         st.dataframe(existing_data[existing_data["Email"].str.contains(client_to_search)])
 
+ 
